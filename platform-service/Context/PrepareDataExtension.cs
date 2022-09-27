@@ -13,9 +13,9 @@ namespace platform_service.Context
                 {
                     Console.WriteLine("Seed data..");
 
-                    var plat1 = new Platform { Age = 1, Name = "A" };
-                    var plat2 = new Platform { Age = 2, Name = "B" };
-                    var plat3 = new Platform { Age = 3, Name = "C" };
+                    var plat1 = new Platform { PlatformName = "CASA", Cost = "Free" };
+                    var plat2 = new Platform { PlatformName = "BASA", Cost = "Free" };
+                    var plat3 = new Platform { PlatformName = "DASA", Cost = "Free" };
 
                     db.Platforms.Add(plat1);
                     db.Platforms.Add(plat2);

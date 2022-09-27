@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cMAlhq2SfVqw/ys11Hi+N4tm3Cum32MbMQ1nmxJtEl9QCq/DSIljeLFGPWMYn/IXeUWnGbm0/M3ACeQa2ScawQ==",
+  "dgSpecHash": "y9BWhb8bZvOkc16AinBAwFPZo6w3OrRf/RUmIAxCCHO78YEOos+aFhYq9OlKi9umzj6K7wecOivz+QVJtLWvdg==",
   "success": true,
-  "projectFilePath": "D:\\Study\\demo-microservices\\platform-service\\platform-service.csproj",
+  "projectFilePath": "D:\\Study\\demo-microservices\\demo-services\\platform-service\\platform-service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\giaonx\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
     "C:\\Users\\giaonx\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

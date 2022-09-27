@@ -1005,11 +1005,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Study\\demo-microservices\\platform-service\\platform-service.csproj",
+      "projectUniqueName": "D:\\Study\\demo-microservices\\demo-services\\platform-service\\platform-service.csproj",
       "projectName": "platform-service",
-      "projectPath": "D:\\Study\\demo-microservices\\platform-service\\platform-service.csproj",
+      "projectPath": "D:\\Study\\demo-microservices\\demo-services\\platform-service\\platform-service.csproj",
       "packagesPath": "C:\\Users\\giaonx\\.nuget\\packages\\",
-      "outputPath": "D:\\Study\\demo-microservices\\platform-service\\obj\\",
+      "outputPath": "D:\\Study\\demo-microservices\\demo-services\\platform-service\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\giaonx\\AppData\\Roaming\\NuGet\\NuGet.Config",

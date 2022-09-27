@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "c3Jc40t1m9oXVCwZUUrlWkUdldSqtvs7QmDVH8Qk1b0=",
+  "Source": "command-service",
+  "BasePath": "_content/command-service",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -213,11 +213,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Study\\demo-microservices\\command-service\\command-service\\command-service.csproj",
+      "projectUniqueName": "D:\\Study\\demo-microservices\\demo-services\\command-service\\command-service\\command-service.csproj",
       "projectName": "command-service",
-      "projectPath": "D:\\Study\\demo-microservices\\command-service\\command-service\\command-service.csproj",
+      "projectPath": "D:\\Study\\demo-microservices\\demo-services\\command-service\\command-service\\command-service.csproj",
       "packagesPath": "C:\\Users\\giaonx\\.nuget\\packages\\",
-      "outputPath": "D:\\Study\\demo-microservices\\command-service\\command-service\\obj\\",
+      "outputPath": "D:\\Study\\demo-microservices\\demo-services\\command-service\\command-service\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\giaonx\\AppData\\Roaming\\NuGet\\NuGet.Config",

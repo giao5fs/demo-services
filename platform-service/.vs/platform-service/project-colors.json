@@ -10,7 +10,12 @@
       "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
       "DisplayName": "Miscellaneous Files",
       "ColorIndex": -1
+    },
+    "2917f189-163e-4d4a-8f26-32c79b0f91c1": {
+      "ProjectGuid": "2917f189-163e-4d4a-8f26-32c79b0f91c1",
+      "DisplayName": "command-service",
+      "ColorIndex": 1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 2
 }
