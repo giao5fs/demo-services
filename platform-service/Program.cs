@@ -3,15 +3,14 @@ using platform_service.Context;
 using platform_service.Models;
 using platform_service.SyncData;
 
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
+var builder = WebApplication.CreateBuilder();
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 builder.Services.AddHttpClient<ISendDataToCommand, SendDataToCommand>();
 
 builder.Services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("InMem"));
+
 builder.Services.AddControllers();
 
 builder.Services.AddScoped<IPlatformRepo, PlatformRepo>();
@@ -21,19 +20,27 @@ builder.Services.AddSwaggerGen();
 var app = builder.Build();
 
 PrepareDataExtension.DataSeed(app);
-// Configure the HTTP request pipeline.
+
 if (app.Environment.IsDevelopment())
 {
+    app.UseDeveloperExceptionPage();
     app.UseSwagger();
-    app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+Console.WriteLine($"Confirm env: {app.Environment.EnvironmentName}");
+
+app.UseRouting();
 
 app.UseAuthorization();
 
-app.MapControllers();
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllers();
+});
 
 app.Run();
+
+
+
 
 

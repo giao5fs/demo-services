@@ -4,10 +4,10 @@ namespace platform_service.Context
 {
     public static class PrepareDataExtension
     {
-        public static void DataSeed(WebApplication app)
+        public static void DataSeed(IApplicationBuilder builder)
         {
-            var scope = app.Services.CreateScope();
-            using (var db = app.Services.CreateScope().ServiceProvider.GetService<AppDbContext>())
+            var scope = builder.ApplicationServices.CreateScope();
+            using (var db = scope.ServiceProvider.GetRequiredService<AppDbContext>())
             {
                 if (!db.Platforms.Any())
                 {

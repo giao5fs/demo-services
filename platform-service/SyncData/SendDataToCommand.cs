@@ -32,6 +32,7 @@ namespace platform_service.SyncData
             {
                 Console.WriteLine("--> Sync data failure");
             }
+
         }
     }
 }

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using platform_service.Dtos;
 using platform_service.Models;
+using platform_service.SyncData;
 
 namespace platform_service.Controllers
 {
@@ -9,35 +10,49 @@ namespace platform_service.Controllers
     [ApiController]
     public class PlatformController : ControllerBase
     {
-        private readonly IPlatformRepo platform;
-        private readonly IMapper mapper;
+        private IPlatformRepo _platformRepo;
+        private IMapper _mapper;
+        private ISendDataToCommand _datacommand;
 
-        public PlatformController(IPlatformRepo platform, IMapper mapper)
+        public PlatformController(IPlatformRepo platformRepo, IMapper mapper, ISendDataToCommand datacommand)
         {
-            this.platform = platform;
-            this.mapper = mapper;
+            _platformRepo = platformRepo;
+            _mapper = mapper;
+            _datacommand = datacommand;
         }
         [HttpGet]
         public ActionResult<IEnumerable<PlatformReadDto>> GetAllPlatform()
         {
-            var res = platform.GetAll();
-            return Ok(mapper.Map<IEnumerable<PlatformReadDto>>(res));
+            var res = _platformRepo.GetAll();
+            return Ok(_mapper.Map<IEnumerable<PlatformReadDto>>(res));
         }
-        [HttpGet]
-        [Route("{Id}")]
-        public ActionResult<PlatformReadDto> GetById(int id)
+        [HttpGet("{Id}", Name = "GetPlatformById")]
+        public ActionResult<PlatformReadDto> GetPlatformById(int id)
         {
-            var res = platform.GetPlatformById(id);
-            return Ok(mapper.Map<PlatformReadDto>(res));
+            var res = _platformRepo.GetPlatformById(id);
+            return Ok(_mapper.Map<PlatformReadDto>(res));
         }
 
-        public ActionResult<PlatformReadDto> CreatePlatform(PlatformCreateDto plat)
+        public async Task<ActionResult<PlatformReadDto>> CreatePlatform(PlatformCreateDto plat)
         {
-            var data = mapper.Map<Platform>(plat); 
-            var res = platform.CreatePlatform(data);
-            return Ok(mapper.Map<PlatformReadDto>(res));
+            //Create obj
+            var dataModel = _mapper.Map<Platform>(plat); 
+            var res = _platformRepo.CreatePlatform(dataModel);
+            var platformReadDto = _mapper.Map<PlatformReadDto>(res);
+            // return Ok();
 
-            return CreatedAtRoute(nameof(GetPlatformById), new { Id = platformReadDto.Id}, platformReadDto);
+            //Sync data
+            try
+            {
+                await _datacommand.SendHttpToCommand(platformReadDto);
+                
+            }
+            catch (System.Exception ex)
+            {
+                System.Console.WriteLine($"--> Could not sync data {ex.Message}");
+            }
+
+            return CreatedAtRoute(nameof(GetPlatformById), new { Id = platformReadDto.Cost}, platformReadDto);
         }
     }
 }
