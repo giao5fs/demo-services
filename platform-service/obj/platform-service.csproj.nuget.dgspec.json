@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Study\\demo-microservices\\demo-services\\platform-service\\platform-service.csproj": {}
+    "C:\\Users\\giao5\\Desktop\\demo-services\\platform-service\\platform-service.csproj": {}
   },
   "projects": {
-    "D:\\Study\\demo-microservices\\demo-services\\platform-service\\platform-service.csproj": {
+    "C:\\Users\\giao5\\Desktop\\demo-services\\platform-service\\platform-service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Study\\demo-microservices\\demo-services\\platform-service\\platform-service.csproj",
+        "projectUniqueName": "C:\\Users\\giao5\\Desktop\\demo-services\\platform-service\\platform-service.csproj",
         "projectName": "platform-service",
-        "projectPath": "D:\\Study\\demo-microservices\\demo-services\\platform-service\\platform-service.csproj",
-        "packagesPath": "C:\\Users\\giaonx\\.nuget\\packages\\",
-        "outputPath": "D:\\Study\\demo-microservices\\demo-services\\platform-service\\obj\\",
+        "projectPath": "C:\\Users\\giao5\\Desktop\\demo-services\\platform-service\\platform-service.csproj",
+        "packagesPath": "C:\\Users\\giao5\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\giao5\\Desktop\\demo-services\\platform-service\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\giaonx\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\giao5\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,8 +25,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://nuget.removethebackground.com/nuget/": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
@@ -59,6 +61,10 @@
               "target": "Package",
               "version": "[6.0.9, )"
             },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.9, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
@@ -70,7 +76,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -82,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

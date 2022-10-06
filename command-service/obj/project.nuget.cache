@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "3NQhWj1b7S4aIZwaxjvHR9qOWFMdbsBvdrznufOenq7MTxtEGAbwPjVtzd8is+pxMmNie+8SlfUgfK5kINU1hQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\giao5\\Desktop\\demo-services\\command-service\\command-service\\command-service.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\giao5\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\giao5\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\giao5\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\giao5\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\giao5\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\giao5\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}

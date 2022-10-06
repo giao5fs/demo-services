@@ -2,45 +2,24 @@ using Microsoft.EntityFrameworkCore;
 using platform_service.Context;
 using platform_service.Models;
 using platform_service.SyncData;
-
-var builder = WebApplication.CreateBuilder();
-
-builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-
-builder.Services.AddHttpClient<ISendDataToCommand, SendDataToCommand>();
-
-builder.Services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("InMem"));
-
-builder.Services.AddControllers();
-
-builder.Services.AddScoped<IPlatformRepo, PlatformRepo>();
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
-var app = builder.Build();
-
-PrepareDataExtension.DataSeed(app);
-
-if (app.Environment.IsDevelopment())
+namespace platform_service
 {
-    app.UseDeveloperExceptionPage();
-    app.UseSwagger();
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            CreateHostBuilder(args).Build().Run();
+        }
+
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
+                Host.CreateDefaultBuilder(args)
+        .ConfigureWebHostDefaults(webBuilder =>
+        {
+            webBuilder.UseStartup<Startup>();
+        });
+    }
+
+    
 }
-
-Console.WriteLine($"Confirm env: {app.Environment.EnvironmentName}");
-
-app.UseRouting();
-
-app.UseAuthorization();
-
-app.UseEndpoints(endpoints =>
-{
-    endpoints.MapControllers();
-});
-
-app.Run();
-
-
-
 
 

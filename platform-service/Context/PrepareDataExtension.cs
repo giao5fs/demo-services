@@ -11,15 +11,11 @@ namespace platform_service.Context
             {
                 if (!db.Platforms.Any())
                 {
-                    Console.WriteLine("Seed data..");
-
-                    var plat1 = new Platform { PlatformName = "CASA", Cost = "Free" };
-                    var plat2 = new Platform { PlatformName = "BASA", Cost = "Free" };
-                    var plat3 = new Platform { PlatformName = "DASA", Cost = "Free" };
-
-                    db.Platforms.Add(plat1);
-                    db.Platforms.Add(plat2);
-                    db.Platforms.Add(plat3);
+                    System.Console.WriteLine("--> Seeding data..");
+                    db.Platforms.AddRange(
+                        new Platform() { Name = "Dot Net", Publisher = "Microsoft", Cost = "Free" },
+                        new Platform() { Name = "SQL Server Express", Publisher = "Microsoft", Cost = "Free" },
+                        new Platform() { Name = "Kubernetes", Publisher = "Cloud Native Computing Foundation", Cost = "Free" });
                     db.SaveChanges();
                 }
                 else

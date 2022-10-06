@@ -8,6 +8,9 @@ namespace platform_service.Models
         {
 
         }
+
         public DbSet<Platform> Platforms { get; set; }
     }
 }
+
+
